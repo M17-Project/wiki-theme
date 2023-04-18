@@ -1,0 +1,9 @@
+{% if site.inc_before_toc %}
+{% include {{ site.inc_before_toc }} %}
+{% endif %}
+
+{% include wiki-theme/components/toc/toc-lib.html title="Contents:" minHeaders=1 html=content sanitize=true class="inline_toc" id="wiki-theme-toc" h_min=1 h_max=3 ordered=1 %}
+
+{% if site.inc_after_toc %}
+{% include {{ site.inc_after_toc }} %}
+{% endif %}

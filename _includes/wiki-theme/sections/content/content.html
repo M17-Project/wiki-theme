@@ -1,0 +1,22 @@
+<div class="wiki-theme-page">
+  <section>
+
+    {% include wiki-theme/sections/tools/tools.html %}
+
+    {% comment %}
+    {% include wiki-theme/components/toc/toc.html %}
+    {% endcomment %}
+
+    {% if site.inc_before_content %}
+    {% include {{ site.inc_before_content }} %}
+    {% endif %}
+
+    <div id="wiki-theme-content">
+      {{ content }}
+    </div>
+
+    {% if site.inc_after_content %}
+    {% include {{ site.inc_after_content }} %}
+    {% endif %}
+  </section>
+</div>
